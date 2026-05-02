@@ -1,0 +1,30 @@
+[user]
+	name = Dararaaaa
+	email = Dararaaaaaaa@gmail.com 
+[http]
+	version = HTTP/1.1
+	postBuffer = 524288000
+	sslBackend = openssl
+	sslCAinfo = F:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+	sslVerify = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[safe]
+	directory = *
+[core]
+[diff "pandoc"]
+  textconv=pandoc --to=markdown
+  prompt = false
+[alias]
+  wdiff = diff --word-diff=color --unified=1
+[credential]
+	helper = manager
+[pull]
+	rebase = false
+[credential "helperselector"]
+	selected = manager
+[credential "https://gitee.com"]
+	provider = generic
