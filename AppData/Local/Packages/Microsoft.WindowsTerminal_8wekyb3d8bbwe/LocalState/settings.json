@@ -1,0 +1,199 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [],
+    "copyFormatting": "none",
+    "copyOnSelect": true,
+    "defaultProfile": "{2b372ca1-1ee2-403d-a839-6d63077ad871}",
+    "initialCols": 120,
+    "initialPosition": "50,10",
+    "keybindings": 
+    [
+        {
+            "id": null,
+            "keys": "alt+shift+minus"
+        },
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+plus"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+right"
+        },
+        {
+            "id": "Terminal.SplitPaneDown",
+            "keys": "ctrl+shift+minus"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.FindText",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "Terminal.SplitPaneRight",
+            "keys": "ctrl+shift+plus"
+        }
+    ],
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "backgroundImage": "ms-appdata:///roaming/goose-1.png",
+            "backgroundImageOpacity": 0.6,
+            "backgroundImageStretchMode": "uniformToFill",
+            "colorScheme": "One Half Dark",
+            "cursorShape": "bar",
+            "font": 
+            {
+                "face": "MesloLGM Nerd Font"
+            },
+            "opacity": 80,
+            "useAcrylic": true
+        },
+        "list": 
+        [
+            {
+                "background": "#013456",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "elevate": false,
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "background": "#282C34",
+                "backgroundImage": "file:///F:/User/OneDrive/OneDrive - MSFT/\u56fe\u7247/Download/47023104-85336080-d191-11e8-957f-b4ac3f8a24c1 (1).png",
+                "backgroundImageAlignment": "right",
+                "backgroundImageOpacity": 0.4,
+                "backgroundImageStretchMode": "uniform",
+                "colorScheme": "shades-of-purple",
+                "commandline": "nu.exe",
+                "elevate": false,
+                "guid": "{2b372ca1-1ee2-403d-a839-6d63077ad871}",
+                "hidden": false,
+                "name": "Nu Shell",
+                "opacity": 90,
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": true
+            },
+            {
+                "commandline": "F:\\Program Files\\Git\\bin\\bash.exe",
+                "guid": "{66c2f53b-85b8-460c-93b6-705dcf00d197}",
+                "hidden": false,
+                "icon": "F:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "icon": null,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{37aedd61-c44f-578b-892b-42ae83e1bb85}",
+                "hidden": false,
+                "name": "ubuntu_test",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{d406141c-f0b9-596c-ad19-1c75c7be0c51}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{778c86c1-6070-57b5-adae-7feba1144abe}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#45902E",
+            "cyan": "#06989A",
+            "foreground": "#52514E",
+            "green": "#4E9A06",
+            "name": "Tango Dark (modified)",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "background": "#1E1D40",
+            "black": "#000000",
+            "blue": "#6943FF",
+            "brightBlack": "#686868",
+            "brightBlue": "#6871FF",
+            "brightCyan": "#79E8FB",
+            "brightGreen": "#43D426",
+            "brightPurple": "#FF77FF",
+            "brightRed": "#F92A1C",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#F1D000",
+            "cursorColor": "#FFB6C1",
+            "cyan": "#00C5C7",
+            "foreground": "#FFFFFF",
+            "green": "#3AD900",
+            "name": "shades-of-purple",
+            "purple": "#FF2C70",
+            "red": "#D90429",
+            "selectionBackground": "#B362FF",
+            "white": "#C7C7C7",
+            "yellow": "#FFE700"
+        }
+    ],
+    "showTabsInTitlebar": true,
+    "showTerminalTitleInTitlebar": false,
+    "tabWidthMode": "equal",
+    "themes": [],
+    "useAcrylicInTabRow": false,
+    "windowingBehavior": "useAnyExisting"
+}
