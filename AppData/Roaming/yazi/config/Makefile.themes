@@ -1,0 +1,96 @@
+.PHONY: theme-list theme-apply theme-tokyo theme-storm theme-catppuccin theme-gruvbox theme-nord
+
+# ============================================================================
+# Yazi 主题管理 Makefile
+# 用途: 快速切换和管理 Yazi 主题
+# ============================================================================
+
+YAZI_CONFIG := $(HOME)/.config/yazi
+THEMES_DIR := $(PWD)/themes
+CURRENT_THEME_FILE := $(YAZI_CONFIG)/theme.toml
+
+# 颜色定义
+COLOR_RESET := \033[0m
+COLOR_GREEN := \033[0;32m
+COLOR_CYAN := \033[0;36m
+COLOR_YELLOW := \033[1;33m
+
+# ============================================================================
+# 主题命令
+# ============================================================================
+
+theme-list:  ## 列出所有可用主题
+	@echo ""
+	@echo "═══════════════════════════════════════════════════════"
+	@echo "          Yazi 可用主题列表"
+	@echo "═══════════════════════════════════════════════════════"
+	@echo ""
+	@echo "  1. Tokyo Night        - 默认 Tokyo Night 主题"
+	@echo "  2. Tokyo Night Storm - 更深背景的 Tokyo Night"
+	@echo "  3. Catppuccin Mocha  - 温暖柔和的深色主题"
+	@echo "  4. Gruvbox Dark      - 复古怀旧配色"
+	@echo "  5. Nord              - 极地冷色调主题"
+	@echo ""
+	@echo "使用方法:"
+	@echo ""
+	@echo "  【推荐】在项目主目录执行 (需要 yazi- 前缀):"
+	@echo "    make yazi-theme-tokyo        # 应用 Tokyo Night"
+	@echo "    make yazi-theme-storm        # 应用 Tokyo Night Storm"
+	@echo "    make yazi-theme-catppuccin   # 应用 Catppuccin Mocha"
+	@echo "    make yazi-theme-gruvbox      # 应用 Gruvbox Dark"
+	@echo "    make yazi-theme-nord         # 应用 Nord"
+	@echo ""
+	@echo "  【备选】在 yazi/ 子目录执行 (无需 yazi- 前缀):"
+	@echo "    cd yazi && make -f Makefile.themes theme-tokyo"
+	@echo "    cd yazi && make -f Makefile.themes theme-storm"
+	@echo "    ..."
+	@echo ""
+	@echo "  💡 提示: 主目录的 make yazi-theme-* 命令会自动调用 yazi/Makefile.themes"
+	@echo ""
+
+theme-tokyo:  ## 应用 Tokyo Night 主题
+	@echo "🎨 应用 Tokyo Night 主题..."
+	@cp "$(PWD)/theme.toml" "$(CURRENT_THEME_FILE)"
+	@echo "✔ Tokyo Night 主题已应用"
+	@echo "  请重启 Yazi 或按 R 刷新以查看效果"
+
+theme-storm:  ## 应用 Tokyo Night Storm 主题
+	@echo "🎨 应用 Tokyo Night Storm 主题..."
+	@cp "$(THEMES_DIR)/tokyo-night-storm.toml" "$(CURRENT_THEME_FILE)"
+	@echo "✔ Tokyo Night Storm 主题已应用"
+	@echo "  请重启 Yazi 或按 R 刷新以查看效果"
+
+theme-catppuccin:  ## 应用 Catppuccin Mocha 主题
+	@echo "🎨 应用 Catppuccin Mocha 主题..."
+	@cp "$(THEMES_DIR)/catppuccin-mocha.toml" "$(CURRENT_THEME_FILE)"
+	@echo "✔ Catppuccin Mocha 主题已应用"
+	@echo "  请重启 Yazi 或按 R 刷新以查看效果"
+
+theme-gruvbox:  ## 应用 Gruvbox Dark 主题
+	@echo "🎨 应用 Gruvbox Dark 主题..."
+	@cp "$(THEMES_DIR)/gruvbox-dark.toml" "$(CURRENT_THEME_FILE)"
+	@echo "✔ Gruvbox Dark 主题已应用"
+	@echo "  请重启 Yazi 或按 R 刷新以查看效果"
+
+theme-nord:  ## 应用 Nord 主题
+	@echo "🎨 应用 Nord 主题..."
+	@cp "$(THEMES_DIR)/nord.toml" "$(CURRENT_THEME_FILE)"
+	@echo "✔ Nord 主题已应用"
+	@echo "  请重启 Yazi 或按 R 刷新以查看效果"
+
+theme-current:  ## 显示当前使用的主题
+	@echo "当前主题:"
+	@grep 'use = ' "$(CURRENT_THEME_FILE)" 2>/dev/null || echo "  未找到主题配置"
+
+theme-backup:  ## 备份当前主题
+	@echo "💾 备份当前主题..."
+	@cp "$(CURRENT_THEME_FILE)" "$(CURRENT_THEME_FILE).backup-$(shell date +%Y%m%d-%H%M%S)"
+	@echo "✔ 主题已备份"
+
+theme-restore:  ## 恢复备份的主题
+	@echo "可用备份:"
+	@ls -1 "$(YAZI_CONFIG)"/theme.toml.backup-* 2>/dev/null || echo "  无可用备份"
+
+help:  ## 显示帮助信息
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
+		awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'

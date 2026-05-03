@@ -10,7 +10,7 @@
 # - 前景色: #c0caf5 (浅蓝白)
 # - 蓝色: #7aa2f7
 # - 青色: #7dcfff  
-# - 绿色: #9ece6 a
+# - 绿色: #9ece6a
 # - 黄色: #e0af68
 # - 橙色: #ff9e64
 # - 红色: #f7768e
@@ -21,7 +21,7 @@
 use = "tokyo-night"
 
 # ===== 管理器界面 [manager] =====
-[mgr]
+[manager]
 # 💡 当前工作目录边框颜色
 cwd = { fg = "#7aa2f7", bold = true }
 
@@ -49,9 +49,9 @@ border_symbol = "│"
 border_style = { fg = "#3b4261" }
 
 # 💡 语法高亮 (代码预览)
-# Use a single syntect theme path string.
-# Example: "base16-ocean.dark" or leave empty for default.
-syntect_theme = "base16-ocean.dark"
+[manager.syntect_theme]
+light = ""
+dark = "base16-ocean.dark"
 
 # ===== 状态栏 [status] =====
 [status]

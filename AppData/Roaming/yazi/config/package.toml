@@ -1,0 +1,24 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "b886025"
+hash = "c3f5c63722344045822f121efe2d2553"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mactag"
+rev = "b886025"
+hash = "f4232fa1f9666c61761af493973ede90"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "ac82af3"
+hash = "bef05511fab6c6414990eb48003582b9"
+
+[[plugin.deps]]
+use = "peterfication/mux"
+rev = "e4e6771"
+hash = "29700ab4ee6609e3dc69182ee2f73b5a"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-macchiato"
+rev = "d3fd3a5"
+hash = "18630fbc34e7b10e74953d01411ed428"
