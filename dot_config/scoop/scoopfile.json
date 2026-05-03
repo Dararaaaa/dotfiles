@@ -1,0 +1,886 @@
+{
+    "config": {
+        "aria2-enabled": true,
+        "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
+        "scoop_branch": "master"
+    },
+    "apps": [
+        {
+            "Version": "2.30.0",
+            "Source": "main",
+            "Updated": "2024-11-05T23:07:17.1689012+08:00",
+            "Info": "",
+            "Name": "1password-cli"
+        },
+        {
+            "Version": "24.09",
+            "Source": "main",
+            "Updated": "2024-12-29T22:12:14.602234+08:00",
+            "Info": "",
+            "Name": "7zip"
+        },
+        {
+            "Version": "1.6.6",
+            "Source": "extras",
+            "Updated": "2025-07-15T16:19:24.7140174+08:00",
+            "Info": "",
+            "Name": "abdownloadmanager"
+        },
+        {
+            "Version": null,
+            "Source": null,
+            "Updated": "2024-10-22T11:47:37.9237654+08:00",
+            "Info": "Install failed",
+            "Name": "adguard-home"
+        },
+        {
+            "Version": "4.0.1",
+            "Source": "lzwme_scoop-proxy-cn",
+            "Updated": "2026-01-30T15:39:31.1878568+08:00",
+            "Info": "",
+            "Name": "anime4k-glsl"
+        },
+        {
+            "Version": "1.37.0-1",
+            "Source": "main",
+            "Updated": "2024-08-01T20:57:19.3188344+08:00",
+            "Info": "",
+            "Name": "aria2"
+        },
+        {
+            "Version": "1.13.1",
+            "Source": "main",
+            "Updated": "2024-08-07T18:05:22.9884387+08:00",
+            "Info": "",
+            "Name": "ascii-image-converter"
+        },
+        {
+            "Version": "6.7.8",
+            "Source": "extras",
+            "Updated": "2026-04-28T15:53:00.5670927+08:00",
+            "Info": "",
+            "Name": "ayugram"
+        },
+        {
+            "Version": "2025.6.1",
+            "Source": "spc",
+            "Updated": "2025-07-04T16:13:12.0259145+08:00",
+            "Info": "",
+            "Name": "bitwarden"
+        },
+        {
+            "Version": "2024-07-02",
+            "Source": "main",
+            "Updated": "2024-08-04T17:12:07.220884+08:00",
+            "Info": "",
+            "Name": "cacert"
+        },
+        {
+            "Version": "1.16.2",
+            "Source": "main",
+            "Updated": "2025-07-18T16:37:18.4899167+08:00",
+            "Info": "",
+            "Name": "chafa"
+        },
+        {
+            "Version": null,
+            "Source": null,
+            "Updated": "2026-01-14T03:06:11.1413025+08:00",
+            "Info": "Install failed",
+            "Name": "cherry-studio"
+        },
+        {
+            "Version": "2.70.2",
+            "Source": "main",
+            "Updated": "2026-05-03T00:09:57.9652188+08:00",
+            "Info": "",
+            "Name": "chezmoi"
+        },
+        {
+            "Version": "2.3.0",
+            "Source": "bdeb1337_bdeb-bucket",
+            "Updated": "2024-08-02T22:25:47.3136144+08:00",
+            "Info": "",
+            "Name": "chocolatey"
+        },
+        {
+            "Version": null,
+            "Source": null,
+            "Updated": "2025-03-24T12:36:22.4499022+08:00",
+            "Info": "Install failed",
+            "Name": "clash-verge-rev"
+        },
+        {
+            "Version": "0.9.3",
+            "Source": "anderlli0053_DEV-tools",
+            "Updated": "2024-12-29T15:53:41.7237691+08:00",
+            "Info": "",
+            "Name": "clawpdf"
+        },
+        {
+            "Version": "1.9.20",
+            "Source": "main",
+            "Updated": "2026-05-04T02:28:40.0952664+08:00",
+            "Info": "",
+            "Name": "clink"
+        },
+        {
+            "Version": "0.18",
+            "Source": "main",
+            "Updated": "2026-05-04T02:28:44.5985938+08:00",
+            "Info": "",
+            "Name": "clink-flex-prompt"
+        },
+        {
+            "Version": "0.9.0.1",
+            "Source": "main",
+            "Updated": "2024-11-05T23:59:12.6671418+08:00",
+            "Info": "",
+            "Name": "clipboard"
+        },
+        {
+            "Version": "0.2.7",
+            "Source": "lzwme_scoop-proxy-cn",
+            "Updated": "2024-11-05T23:13:34.5552455+08:00",
+            "Info": "",
+            "Name": "clipboard-online"
+        },
+        {
+            "Version": "2.3.0",
+            "Source": "dorado",
+            "Updated": "2026-05-02T22:48:48.3311639+08:00",
+            "Info": "",
+            "Name": "cloudflare-speedtest"
+        },
+        {
+            "Version": "0.50.5",
+            "Source": "extras",
+            "Updated": "2025-05-20T00:26:54.9880929+08:00",
+            "Info": "",
+            "Name": "cursor"
+        },
+        {
+            "Version": "3.14",
+            "Source": "main",
+            "Updated": "2024-11-02T17:29:31.345054+08:00",
+            "Info": "",
+            "Name": "dark"
+        },
+        {
+            "Version": "1.0.1",
+            "Source": "extras",
+            "Updated": "2025-01-02T14:42:10.1563028+08:00",
+            "Info": "",
+            "Name": "deeplx"
+        },
+        {
+            "Version": "0.12.64",
+            "Source": "extras",
+            "Updated": "2025-04-11T12:30:42.5316833+08:00",
+            "Info": "",
+            "Name": "driverstoreexplorer"
+        },
+        {
+            "Version": "2.4.5",
+            "Source": "extras",
+            "Updated": "2026-01-12T15:05:06.0833098+08:00",
+            "Info": "",
+            "Name": "easytier"
+        },
+        {
+            "Version": "1.5.2",
+            "Source": "Jadeiin_scoop",
+            "Updated": "2026-01-12T15:06:57.620661+08:00",
+            "Info": "",
+            "Name": "easytier-game"
+        },
+        {
+            "Version": "2.4.5",
+            "Source": "extras",
+            "Updated": "2026-04-11T21:23:02.8435999+08:00",
+            "Info": "",
+            "Name": "easytier-gui"
+        },
+        {
+            "Version": "1.4",
+            "Source": "nonportable",
+            "Updated": "2025-05-31T14:04:38.0993598+08:00",
+            "Info": "",
+            "Name": "equalizer-apo-np"
+        },
+        {
+            "Version": "1.4.1.1026",
+            "Source": "extras",
+            "Updated": "2025-02-21T14:39:07.9344654+08:00",
+            "Info": "",
+            "Name": "everything"
+        },
+        {
+            "Version": "10.2.0",
+            "Source": "main",
+            "Updated": "2025-07-17T18:07:31.2591274+08:00",
+            "Info": "",
+            "Name": "fd"
+        },
+        {
+            "Version": "7.1.1",
+            "Source": "main",
+            "Updated": "2025-07-17T19:40:05.3285949+08:00",
+            "Info": "",
+            "Name": "ffmpeg"
+        },
+        {
+            "Version": "5.0.20253.3311",
+            "Source": "extras",
+            "Updated": "2025-04-26T13:38:52.2927688+08:00",
+            "Info": "",
+            "Name": "fiddler"
+        },
+        {
+            "Version": "1.0-go",
+            "Source": "main",
+            "Updated": "2024-11-02T17:26:29.999702+08:00",
+            "Info": "",
+            "Name": "figlet"
+        },
+        {
+            "Version": null,
+            "Source": null,
+            "Updated": "2026-04-04T13:48:59.270202+08:00",
+            "Info": "Install failed",
+            "Name": "fish"
+        },
+        {
+            "Version": "0.8.68",
+            "Source": "extras",
+            "Updated": "2024-12-07T13:54:12.6288298+08:00",
+            "Info": "",
+            "Name": "flclash"
+        },
+        {
+            "Version": null,
+            "Source": null,
+            "Updated": "2025-04-01T21:12:40.5946886+08:00",
+            "Info": "Install failed",
+            "Name": "follow"
+        },
+        {
+            "Version": "2.0.34.5",
+            "Source": "extras",
+            "Updated": "2025-07-15T16:12:53.5347637+08:00",
+            "Info": "",
+            "Name": "free-manga-downloader2"
+        },
+        {
+            "Version": "6.28.1.6321",
+            "Source": "extras",
+            "Updated": "2025-07-15T16:15:04.1929318+08:00",
+            "Info": "",
+            "Name": "freedownloadmanager"
+        },
+        {
+            "Version": "0.64.0",
+            "Source": "main",
+            "Updated": "2025-07-17T19:51:18.43717+08:00",
+            "Info": "",
+            "Name": "fzf"
+        },
+        {
+            "Version": "3.9.1",
+            "Source": "main",
+            "Updated": "2025-04-07T11:59:09.0365796+08:00",
+            "Info": "",
+            "Name": "gdrive"
+        },
+        {
+            "Version": "2.49.0",
+            "Source": "main",
+            "Updated": "2025-04-01T21:18:20.1602915+08:00",
+            "Info": "",
+            "Name": "git"
+        },
+        {
+            "Version": "2.1.2",
+            "Source": "main",
+            "Updated": "2026-05-03T17:41:10.2091437+08:00",
+            "Info": "",
+            "Name": "glow"
+        },
+        {
+            "Version": "1.8.2",
+            "Source": "extras",
+            "Updated": "2025-10-20T23:40:29.3755897+08:00",
+            "Info": "",
+            "Name": "gopeed"
+        },
+        {
+            "Version": "0.8.0",
+            "Source": "main",
+            "Updated": "2024-08-04T20:27:48.6401002+08:00",
+            "Info": "",
+            "Name": "gow"
+        },
+        {
+            "Version": "2.5.1",
+            "Source": "main",
+            "Updated": "2024-08-02T14:14:12.2472972+08:00",
+            "Info": "",
+            "Name": "gsudo"
+        },
+        {
+            "Version": "1.9.3",
+            "Source": "lzwme_scoop-proxy-cn",
+            "Updated": "2025-02-23T17:33:47.183679+08:00",
+            "Info": "",
+            "Name": "gui-for-singbox"
+        },
+        {
+            "Version": "7.1.2-0",
+            "Source": "main",
+            "Updated": "2025-07-17T20:31:13.1050591+08:00",
+            "Info": "",
+            "Name": "imagemagick"
+        },
+        {
+            "Version": "1.75",
+            "Source": "main",
+            "Updated": "2024-11-02T17:28:52.8038568+08:00",
+            "Info": "",
+            "Name": "innounp"
+        },
+        {
+            "Version": "1.8.1",
+            "Source": "main",
+            "Updated": "2025-07-17T19:38:50.4138127+08:00",
+            "Info": "",
+            "Name": "jq"
+        },
+        {
+            "Version": "2.0.0",
+            "Source": "hoilc_scoop-lemon",
+            "Updated": "2026-01-30T15:31:28.9985531+08:00",
+            "Info": "",
+            "Name": "kikoplay"
+        },
+        {
+            "Version": "5.00.2843",
+            "Source": "anderlli0053_DEV-tools",
+            "Updated": "2024-11-12T14:44:45.2137872+08:00",
+            "Info": "",
+            "Name": "listary5"
+        },
+        {
+            "Version": "0.11.1",
+            "Source": "extras",
+            "Updated": "2024-12-29T23:24:15.1238562+08:00",
+            "Info": "",
+            "Name": "magpie"
+        },
+        {
+            "Version": "4.4.1",
+            "Source": "main",
+            "Updated": "2024-08-04T16:01:24.8143144+08:00",
+            "Info": "",
+            "Name": "make"
+        },
+        {
+            "Version": "1.7.2",
+            "Source": "extras",
+            "Updated": "2025-03-05T11:08:38.3620498+08:00",
+            "Info": "Deprecated package",
+            "Name": "mihomo-party"
+        },
+        {
+            "Version": "6.1.0",
+            "Source": "extras",
+            "Updated": "2024-10-30T18:16:21.2537778+08:00",
+            "Info": "",
+            "Name": "moonlight"
+        },
+        {
+            "Version": "1.8.19",
+            "Source": "extras",
+            "Updated": "2026-01-30T15:21:37.3042025+08:00",
+            "Info": "",
+            "Name": "motrix"
+        },
+        {
+            "Version": null,
+            "Source": null,
+            "Updated": "2024-10-29T22:20:57.5877174+08:00",
+            "Info": "Install failed",
+            "Name": "mp3tag"
+        },
+        {
+            "Version": "0.40.0.1",
+            "Source": "extras",
+            "Updated": "2025-05-06T21:46:00.559787+08:00",
+            "Info": "",
+            "Name": "mpv-easy-player"
+        },
+        {
+            "Version": "9.2.0",
+            "Source": "main",
+            "Updated": "2025-03-19T21:55:36.9373319+08:00",
+            "Info": "",
+            "Name": "mysql"
+        },
+        {
+            "Version": "8.0.41",
+            "Source": "main",
+            "Updated": "2025-03-19T21:56:05.2166897+08:00",
+            "Info": "",
+            "Name": "mysql-workbench"
+        },
+        {
+            "Version": "0.11.3",
+            "Source": "main",
+            "Updated": "2025-07-15T16:44:45.1514171+08:00",
+            "Info": "",
+            "Name": "neovim"
+        },
+        {
+            "Version": "1.27.4",
+            "Source": "main",
+            "Updated": "2025-02-24T17:24:19.5432431+08:00",
+            "Info": "",
+            "Name": "nginx"
+        },
+        {
+            "Version": "0.106.1",
+            "Source": "main",
+            "Updated": "2025-08-05T18:07:49.6628442+08:00",
+            "Info": "",
+            "Name": "nu"
+        },
+        {
+            "Version": "1.2.2",
+            "Source": "main",
+            "Updated": "2025-08-11T22:43:54.9659877+08:00",
+            "Info": "",
+            "Name": "nvm"
+        },
+        {
+            "Version": "25.5.0",
+            "Source": "main",
+            "Updated": "2025-03-21T11:30:34.2891224+08:00",
+            "Info": "",
+            "Name": "oh-my-posh"
+        },
+        {
+            "Version": "9.5.0.0p1",
+            "Source": "main",
+            "Updated": "2024-10-11T17:26:48.477806+08:00",
+            "Info": "",
+            "Name": "openssh"
+        },
+        {
+            "Version": "3.5.1",
+            "Source": "main",
+            "Updated": "2025-07-02T16:09:52.2888953+08:00",
+            "Info": "",
+            "Name": "openssl"
+        },
+        {
+            "Version": "3.4",
+            "Source": "main",
+            "Updated": "2024-09-25T09:28:17.2333293+08:00",
+            "Info": "",
+            "Name": "pandoc"
+        },
+        {
+            "Version": "150-97d",
+            "Source": "extras",
+            "Updated": "2025-03-07T16:58:21.6322775+08:00",
+            "Info": "",
+            "Name": "parsec"
+        },
+        {
+            "Version": "2.02",
+            "Source": "main",
+            "Updated": "2025-01-07T17:59:27.1032542+08:00",
+            "Info": "",
+            "Name": "pdftk"
+        },
+        {
+            "Version": "1.6.8.10",
+            "Source": "nonportable",
+            "Updated": "2025-05-31T14:07:57.5475629+08:00",
+            "Info": "",
+            "Name": "peace-np"
+        },
+        {
+            "Version": "9.2.2",
+            "Source": "JotmKKmkLTzE_Scoop-apps",
+            "Updated": "2025-12-18T19:16:41.1932237+08:00",
+            "Info": "",
+            "Name": "peerbanhelper"
+        },
+        {
+            "Version": "10.14.0",
+            "Source": "main",
+            "Updated": "2025-08-11T22:39:16.2498031+08:00",
+            "Info": "",
+            "Name": "pnpm"
+        },
+        {
+            "Version": "24.08.0-0",
+            "Source": "main",
+            "Updated": "2025-07-17T19:47:43.5823647+08:00",
+            "Info": "",
+            "Name": "poppler"
+        },
+        {
+            "Version": "1.72.1",
+            "Source": "main",
+            "Updated": "2025-12-27T02:01:54.8828098+08:00",
+            "Info": "",
+            "Name": "rclone"
+        },
+        {
+            "Version": null,
+            "Source": null,
+            "Updated": "2026-05-02T23:05:47.669868+08:00",
+            "Info": "Install failed",
+            "Name": "readest"
+        },
+        {
+            "Version": "0.45.1",
+            "Source": "main",
+            "Updated": "2025-07-17T20:28:56.7317385+08:00",
+            "Info": "",
+            "Name": "resvg"
+        },
+        {
+            "Version": "14.1.1",
+            "Source": "main",
+            "Updated": "2025-07-17T18:08:52.9872087+08:00",
+            "Info": "",
+            "Name": "ripgrep"
+        },
+        {
+            "Version": "3.3.4-1",
+            "Source": "main",
+            "Updated": "2024-08-04T16:17:36.5511531+08:00",
+            "Info": "",
+            "Name": "ruby"
+        },
+        {
+            "Version": "4.11",
+            "Source": "extras",
+            "Updated": "2025-12-19T00:56:39.2814719+08:00",
+            "Info": "",
+            "Name": "rufus"
+        },
+        {
+            "Version": "0.3.0",
+            "Source": "extras",
+            "Updated": "2025-01-05T00:11:33.3840079+08:00",
+            "Info": "",
+            "Name": "scoop-completion"
+        },
+        {
+            "Version": "1.5.0",
+            "Source": "main",
+            "Updated": "2025-01-05T00:08:39.1019924+08:00",
+            "Info": "",
+            "Name": "scoop-search"
+        },
+        {
+            "Version": "1.11.14",
+            "Source": "main",
+            "Updated": "2025-07-02T16:26:51.3999143+08:00",
+            "Info": "",
+            "Name": "sing-box"
+        },
+        {
+            "Version": "1.14.198",
+            "Source": "extras",
+            "Updated": "2025-12-26T17:10:52.0748994+08:00",
+            "Info": "",
+            "Name": "speedtest"
+        },
+        {
+            "Version": "1.25.1",
+            "Source": "main",
+            "Updated": "2026-05-03T02:29:58.983333+08:00",
+            "Info": "",
+            "Name": "starship"
+        },
+        {
+            "Version": "0.2020.01.26",
+            "Source": "main",
+            "Updated": "2024-11-11T18:07:23.0486289+08:00",
+            "Info": "",
+            "Name": "sudo"
+        },
+        {
+            "Version": "2025.924.154138",
+            "Source": "extras",
+            "Updated": "2025-11-26T14:15:58.3518933+08:00",
+            "Info": "",
+            "Name": "sunshine"
+        },
+        {
+            "Version": "1.1.5",
+            "Source": "kkzzhizhou_scoop-apps",
+            "Updated": "2024-10-10T11:08:42.8520592+08:00",
+            "Info": "",
+            "Name": "superfile"
+        },
+        {
+            "Version": "20250213",
+            "Source": "extras",
+            "Updated": "2025-03-28T20:33:39.6013932+08:00",
+            "Info": "",
+            "Name": "sysinternals"
+        },
+        {
+            "Version": "9.17.1",
+            "Source": "extras",
+            "Updated": "2025-03-25T13:21:28.1202799+08:00",
+            "Info": "",
+            "Name": "termius"
+        },
+        {
+            "Version": "1.0.17",
+            "Source": "hoilc_scoop-lemon",
+            "Updated": "2026-05-04T01:53:56.1675289+08:00",
+            "Info": "",
+            "Name": "termora"
+        },
+        {
+            "Version": "130.0.6723.174",
+            "Source": "extras",
+            "Updated": "2025-05-01T15:01:06.2272044+08:00",
+            "Info": "",
+            "Name": "thorium"
+        },
+        {
+            "Version": "1.13.0",
+            "Source": "main",
+            "Updated": "2026-05-02T23:10:36.2017729+08:00",
+            "Info": "",
+            "Name": "tlrc"
+        },
+        {
+            "Version": "0.22.6",
+            "Source": "main",
+            "Updated": "2024-08-04T16:24:44.5099518+08:00",
+            "Info": "",
+            "Name": "tree-sitter"
+        },
+        {
+            "Version": "0.12.0",
+            "Source": "main",
+            "Updated": "2024-11-08T16:55:32.1108239+08:00",
+            "Info": "",
+            "Name": "typst"
+        },
+        {
+            "Version": "3.1.5",
+            "Source": "extras",
+            "Updated": "2025-01-05T00:18:57.1669765+08:00",
+            "Info": "",
+            "Name": "unigetui"
+        },
+        {
+            "Version": "0.6.11",
+            "Source": "main",
+            "Updated": "2025-04-01T21:12:14.8088193+08:00",
+            "Info": "",
+            "Name": "uv"
+        },
+        {
+            "Version": "7.8.3",
+            "Source": "extras",
+            "Updated": "2025-02-21T16:28:15.7193381+08:00",
+            "Info": "",
+            "Name": "v2rayN"
+        },
+        {
+            "Version": null,
+            "Source": null,
+            "Updated": "2025-08-15T21:31:52.3573156+08:00",
+            "Info": "Install failed",
+            "Name": "VeraCrypt-Portable_ACooper81"
+        },
+        {
+            "Version": "20240203-110809-5046fc22",
+            "Source": "extras",
+            "Updated": "2025-07-17T20:35:47.8285437+08:00",
+            "Info": "",
+            "Name": "wezterm"
+        },
+        {
+            "Version": "1.21.4",
+            "Source": "main",
+            "Updated": "2024-08-04T17:12:12.2866749+08:00",
+            "Info": "",
+            "Name": "wget"
+        },
+        {
+            "Version": "1.0.0",
+            "Source": "extras",
+            "Updated": "2025-11-06T15:45:08.4957127+08:00",
+            "Info": "",
+            "Name": "win32-disk-imager"
+        },
+        {
+            "Version": "1.22.11751.0",
+            "Source": "extras",
+            "Updated": "2025-07-17T20:39:15.7554215+08:00",
+            "Info": "",
+            "Name": "windows-terminal"
+        },
+        {
+            "Version": "2.7.0",
+            "Source": "extras",
+            "Updated": "2026-05-03T15:42:47.1207736+08:00",
+            "Info": "",
+            "Name": "windterm"
+        },
+        {
+            "Version": "4.31",
+            "Source": "extras",
+            "Updated": "2026-04-03T01:49:28.6028229+08:00",
+            "Info": "",
+            "Name": "wiztree"
+        },
+        {
+            "Version": "8.0.29",
+            "Source": "versions",
+            "Updated": "2025-03-13T12:55:08.9031046+08:00",
+            "Info": "",
+            "Name": "xdman-beta"
+        },
+        {
+            "Version": "25.1.30",
+            "Source": "main",
+            "Updated": "2025-02-21T16:28:05.3758043+08:00",
+            "Info": "",
+            "Name": "xray"
+        },
+        {
+            "Version": "25.5.31",
+            "Source": "main",
+            "Updated": "2025-07-18T16:39:25.9394845+08:00",
+            "Info": "",
+            "Name": "yazi"
+        },
+        {
+            "Version": "0.4.10",
+            "Source": "extras",
+            "Updated": "2026-03-11T12:33:55.106828+08:00",
+            "Info": "",
+            "Name": "yesplaymusic"
+        },
+        {
+            "Version": "1.2.5",
+            "Source": "anderlli0053_DEV-tools",
+            "Updated": "2025-03-14T14:46:17.5954295+08:00",
+            "Info": "",
+            "Name": "ykman"
+        },
+        {
+            "Version": "7.0.9",
+            "Source": null,
+            "Updated": "2025-05-22T23:52:02.8099326+08:00",
+            "Info": "",
+            "Name": "zotero"
+        },
+        {
+            "Version": "0.9.8",
+            "Source": "main",
+            "Updated": "2025-07-17T19:53:18.4311136+08:00",
+            "Info": "",
+            "Name": "zoxide"
+        }
+    ],
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main",
+            "Updated": "2026-05-04T00:34:02+08:00",
+            "Manifests": 1514
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2026-05-04T00:34:21+08:00",
+            "Manifests": 2305
+        },
+        {
+            "Name": "versions",
+            "Source": "https://github.com/ScoopInstaller/Versions",
+            "Updated": "2026-05-04T01:11:41+08:00",
+            "Manifests": 578
+        },
+        {
+            "Name": "nirsoft",
+            "Source": "https://github.com/ScoopInstaller/Nirsoft",
+            "Updated": "2026-04-30T15:09:31+08:00",
+            "Manifests": 290
+        },
+        {
+            "Name": "nonportable",
+            "Source": "https://github.com/ScoopInstaller/Nonportable",
+            "Updated": "2026-05-03T05:03:10+08:00",
+            "Manifests": 132
+        },
+        {
+            "Name": "anderlli0053_DEV-tools",
+            "Source": "https://github.com/anderlli0053/DEV-tools",
+            "Updated": "2025-12-19T00:33:57+08:00",
+            "Manifests": 26109
+        },
+        {
+            "Name": "bdeb1337_bdeb-bucket",
+            "Source": "https://github.com/bdeb1337/bdeb-bucket",
+            "Updated": "2026-04-30T12:06:42+08:00",
+            "Manifests": 7
+        },
+        {
+            "Name": "dorado",
+            "Source": "https://github.com/chawyehsu/dorado",
+            "Updated": "2026-05-03T08:37:13+08:00",
+            "Manifests": 271
+        },
+        {
+            "Name": "hoilc_scoop-lemon",
+            "Source": "https://github.com/hoilc/scoop-lemon",
+            "Updated": "2026-05-03T23:51:37+08:00",
+            "Manifests": 2521
+        },
+        {
+            "Name": "Jadeiin_scoop",
+            "Source": "https://github.com/Jadeiin/scoop",
+            "Updated": "2026-05-04T01:11:13+08:00",
+            "Manifests": 191
+        },
+        {
+            "Name": "JotmKKmkLTzE_Scoop-apps",
+            "Source": "https://github.com/JotmKKmkLTzE/Scoop-apps",
+            "Updated": "2026-05-01T18:00:31+08:00",
+            "Manifests": 13
+        },
+        {
+            "Name": "kkzzhizhou_scoop-apps",
+            "Source": "https://github.com/kkzzhizhou/scoop-apps",
+            "Updated": "2026-05-03T14:42:45+08:00",
+            "Manifests": 15738
+        },
+        {
+            "Name": "lzwme_scoop-proxy-cn",
+            "Source": "https://github.com/lzwme/scoop-proxy-cn",
+            "Updated": "2026-05-03T15:40:38+08:00",
+            "Manifests": 11811
+        },
+        {
+            "Name": "spc",
+            "Source": "https://gitee.com/wlzwme/scoop-proxy-cn.git",
+            "Updated": "2026-05-03T12:04:27+08:00",
+            "Manifests": 11811
+        }
+    ]
+}
