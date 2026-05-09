@@ -115,8 +115,8 @@ $env.NU_PLUGIN_DIRS = [
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
-# oh-my-posh init nu --print | save ~/.config/nuShell/.oh-my-posh.nu --force
-oh-my-posh init nu --config  F:/ProgramData/scoop/persist/nushell/atomic.omp.json --print | save ~/.config/nuShell/.oh-my-posh.nu --force
+# oh-my-posh init nu --print | save ~/.config/nushell/.oh-my-posh.nu --force
+oh-my-posh init nu --config  F:/ProgramData/scoop/persist/nushell/atomic.omp.json --print | save ~/.config/nushell/.oh-my-posh.nu --force
 
 def --env y [...args] {
   let tmp = (mktemp -t "yazi-cwd.XXXXXX")
@@ -128,7 +128,7 @@ def --env y [...args] {
   rm -fp $tmp
 }
 source ./key.nu
-zoxide init nushell | save -f ~/.config/nuShell/.zoxide.nu
+zoxide init nushell | save -f ~/.config/nushell/.zoxide.nu
 $env.YAZI_FILE_ONE = "F:\\ProgramData\\scoop\\apps\\git\\current\\usr\\bin\\file.exe"
 $env.Path = ($env.Path | prepend 'F:/Procedure/singlegen/bin/')
 $env.UV_CACHE_DIR = "F:/ProgramData/scoop/persist/uv/cache"

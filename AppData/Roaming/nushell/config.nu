@@ -896,15 +896,18 @@ $env.config = {
         }
     ]
 }
-source ~/.config/nuShell/.oh-my-posh.nu
+source ~/.config/nushell/.oh-my-posh.nu
+
 source F:\ProgramData\scoop\persist\nushell\nu_scripts\custom-completions\git\git-completions.nu
 source F:\ProgramData\scoop\persist\nushell\nu_scripts\custom-completions\docker\docker-completions.nu
 source F:\ProgramData\scoop\persist\nushell\nu_scripts\custom-completions\ssh\ssh-completions.nu
 source F:\ProgramData\scoop\persist\nushell\nu_scripts\custom-completions\scoop\scoop-completions.nu
 source F:\ProgramData\scoop\persist\nushell\nu_scripts\custom-completions\vscode\vscode-completions.nu
 source F:\ProgramData\scoop\persist\nushell\nu_scripts\modules\nvim\mod.nu
+
 # std/dirs shells-aliases *
-source ~/.config/nuShell/.zoxide.nu
+source ~/.config/nushell/.zoxide.nu
+source ~/.config/nushell/fzf-external.nu
 
 def start-ssh-agent [] {
     # 检查 ssh-agent 是否可用
