@@ -928,4 +928,5 @@ def start-ssh-agent [] {
 
 # Nushell 启动时执行
 start-ssh-agent
+source ~/.config/nushell/bw-unlock.nu
 
