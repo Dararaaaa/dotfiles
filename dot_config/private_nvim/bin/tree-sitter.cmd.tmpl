@@ -1,0 +1,5 @@
+@echo off
+rem Compatibility shim: nvim-treesitter still passes --no-bindings, which
+rem recent tree-sitter CLI releases no longer accept.
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0tree-sitter.ps1" %*
+exit /b %ERRORLEVEL%

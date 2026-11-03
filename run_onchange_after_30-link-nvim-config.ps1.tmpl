@@ -1,0 +1,26 @@
+$ErrorActionPreference = "Stop"
+
+$source = Join-Path $env:USERPROFILE ".config\nvim"
+$link = Join-Path $env:LOCALAPPDATA "nvim"
+
+if (-not (Test-Path -LiteralPath $source)) {
+    throw "Managed Neovim config was not created at $source"
+}
+
+if (Test-Path -LiteralPath $link) {
+    $item = Get-Item -LiteralPath $link -Force
+    if ($item.LinkType -eq "Junction") {
+        $existingTarget = @($item.Target)[0]
+        if ($existingTarget -and ((Resolve-Path $existingTarget).Path -eq (Resolve-Path $source).Path)) {
+            Write-Host "[nvim-config] Windows config junction already exists"
+            exit 0
+        }
+    }
+
+    $backup = "$link.chezmoi-backup-$(Get-Date -Format 'yyyyMMddHHmmss')"
+    Move-Item -LiteralPath $link -Destination $backup
+    Write-Host "[nvim-config] Existing config moved to $backup"
+}
+
+New-Item -ItemType Junction -Path $link -Target $source | Out-Null
+Write-Host "[nvim-config] Linked $link -> $source"

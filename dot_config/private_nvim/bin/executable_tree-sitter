@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# nvim-treesitter's pinned release still passes --no-bindings, which newer
+# tree-sitter releases removed. Drop that obsolete flag for compatibility.
+self="$(readlink -f "$0")"
+real_tree_sitter=""
+
+IFS=":" read -r -a path_entries <<< "${PATH:-}"
+for path_entry in "${path_entries[@]}"; do
+  candidate="${path_entry}/tree-sitter"
+  if [[ -x "${candidate}" && "$(readlink -f "${candidate}")" != "${self}" ]]; then
+    real_tree_sitter="${candidate}"
+    break
+  fi
+done
+
+if [[ -z "${real_tree_sitter}" ]]; then
+  echo "tree-sitter: real executable not found" >&2
+  exit 127
+fi
+
+args=()
+for arg in "$@"; do
+  if [[ "${arg}" != "--no-bindings" ]]; then
+    args+=("${arg}")
+  fi
+done
+
+exec "${real_tree_sitter}" "${args[@]}"

@@ -1,0 +1,33 @@
+[user]
+	name = Dararaaaa
+	email = lovechuu@protonmail.com
+[http]
+	version = HTTP/1.1
+	postBuffer = 524288000
+	sslVerify = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[safe]
+	directory = *
+[core]
+	autocrlf = {{ if eq .chezmoi.os "windows" }}true{{ else }}input{{ end }}
+[diff "pandoc"]
+  textconv=pandoc --to=markdown
+  prompt = false
+[alias]
+  wdiff = diff --word-diff=color --unified=1
+{{- if eq .chezmoi.os "windows" }}
+[credential]
+	helper = manager
+[credential "helperselector"]
+	selected = manager
+{{- end }}
+[pull]
+	rebase = false
+{{- if eq .chezmoi.os "windows" }}
+[credential "https://gitee.com"]
+	provider = generic
+{{- end }}

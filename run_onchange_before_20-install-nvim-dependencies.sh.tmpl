@@ -1,0 +1,132 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+log() {
+  printf '[nvim-deps] %s\n' "$*"
+}
+
+as_root() {
+  if ((EUID == 0)); then
+    "$@"
+  else
+    sudo "$@"
+  fi
+}
+
+install_with_apt() {
+  local packages=(
+    neovim
+    git
+    curl
+    wget
+    unzip
+    tar
+    build-essential
+    make
+    ripgrep
+    fd-find
+    fzf
+    fish
+    nodejs
+    npm
+    python3
+    python3-venv
+    python3-pip
+    python3-debugpy
+    luarocks
+    imagemagick
+    lazygit
+    git-delta
+    tree-sitter-cli
+  )
+  local missing=()
+  local package
+
+  for package in "${packages[@]}"; do
+    if ! dpkg-query -W -f='${Status}' "$package" 2>/dev/null | grep -q "ok installed"; then
+      if apt-cache show "$package" >/dev/null 2>&1; then
+        missing+=("$package")
+      fi
+    fi
+  done
+
+  if ((${#missing[@]} == 0)); then
+    log "APT dependencies are already installed"
+    return
+  fi
+
+  log "Installing APT packages: ${missing[*]}"
+  as_root apt-get update
+  as_root env DEBIAN_FRONTEND=noninteractive apt-get install -y "${missing[@]}"
+}
+
+install_with_brew() {
+  local formulae=(neovim git ripgrep fd fzf fish node python lazygit git-delta tree-sitter imagemagick)
+  local missing=()
+  local formula
+
+  for formula in "${formulae[@]}"; do
+    if ! brew list --formula "$formula" >/dev/null 2>&1; then
+      missing+=("$formula")
+    fi
+  done
+
+  if ((${#missing[@]} == 0)); then
+    log "Homebrew dependencies are already installed"
+    return
+  fi
+
+  log "Installing Homebrew formulae: ${missing[*]}"
+  brew install "${missing[@]}"
+}
+
+if command -v apt-get >/dev/null 2>&1; then
+  install_with_apt
+elif command -v brew >/dev/null 2>&1; then
+  install_with_brew
+else
+  log "Unsupported Linux package manager. Install Neovim, Git, GCC, make, Node, Python, ripgrep, fd, fzf, lazygit, delta, Yazi and tree-sitter CLI manually."
+  exit 1
+fi
+
+# Homebrew provides optional integrations used by the configuration.
+if command -v brew >/dev/null 2>&1; then
+  for formula in yazi tectonic; do
+    if ! brew list --formula "$formula" >/dev/null 2>&1; then
+      log "Installing optional Homebrew formula: $formula"
+      brew install "$formula"
+    fi
+  done
+fi
+
+# Debian exposes the fd binary as fdfind.
+if ! command -v fd >/dev/null 2>&1 && command -v fdfind >/dev/null 2>&1; then
+  as_root ln -sf "$(command -v fdfind)" /usr/local/bin/fd
+fi
+
+if ! python3 -c 'import debugpy' >/dev/null 2>&1; then
+  log "Installing debugpy for the configured Python DAP adapter"
+  python3 -m pip install --user --upgrade debugpy
+fi
+
+if ! command -v tree-sitter >/dev/null 2>&1; then
+  if command -v npm >/dev/null 2>&1; then
+    log "Installing tree-sitter CLI through npm"
+    npm install --global tree-sitter-cli
+  else
+    log "tree-sitter CLI is unavailable and npm is not installed"
+    exit 1
+  fi
+fi
+
+if ! command -v nvim >/dev/null 2>&1; then
+  log "Neovim installation did not produce an nvim executable"
+  exit 1
+fi
+
+if ! nvim --version | head -n 1 | grep -Eq 'v0\.(1[1-9]|[2-9][0-9])'; then
+  log "Neovim 0.11 or newer is required; found: $(nvim --version | head -n 1)"
+  exit 1
+fi
+
+log "Neovim prerequisites are ready"

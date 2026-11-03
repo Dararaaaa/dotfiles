@@ -1,0 +1,97 @@
+$ErrorActionPreference = "Stop"
+
+function Write-NvimDepsLog {
+    param([string]$Message)
+    Write-Host "[nvim-deps] $Message"
+}
+
+function Refresh-Path {
+    $machine = [Environment]::GetEnvironmentVariable("Path", "Machine")
+    $user = [Environment]::GetEnvironmentVariable("Path", "User")
+    $env:Path = (($machine, $user) | Where-Object { $_ }) -join ";"
+}
+
+$scoopPackages = @(
+    "neovim",
+    "git",
+    "ripgrep",
+    "fd",
+    "fzf",
+    "lazygit",
+    "delta",
+    "yazi",
+    "nodejs-lts",
+    "python",
+    "tree-sitter",
+    "imagemagick",
+    "7zip",
+    "make",
+    "mingw",
+    "pwsh"
+)
+
+$wingetPackages = @(
+    "Neovim.Neovim",
+    "Git.Git",
+    "BurntSushi.ripgrep.MSVC",
+    "sharkdp.fd",
+    "junegunn.fzf",
+    "JesseDuffield.lazygit",
+    "dandavison.delta",
+    "sxyazi.yazi",
+    "OpenJS.NodeJS.LTS",
+    "Python.Python.3.13",
+    "tree-sitter.tree-sitter",
+    "ImageMagick.ImageMagick",
+    "7zip.7zip",
+    "Microsoft.PowerShell"
+)
+
+if (Get-Command scoop -ErrorAction SilentlyContinue) {
+    foreach ($package in $scoopPackages) {
+        Write-NvimDepsLog "Ensuring Scoop package: $package"
+        scoop install $package
+    }
+}
+elseif (Get-Command winget -ErrorAction SilentlyContinue) {
+    foreach ($package in $wingetPackages) {
+        Write-NvimDepsLog "Ensuring winget package: $package"
+        winget install --id $package --exact --silent --accept-package-agreements --accept-source-agreements
+    }
+}
+else {
+    throw "Neither Scoop nor winget is available. Install Scoop or App Installer first."
+}
+
+Refresh-Path
+
+$python = Get-Command python -ErrorAction SilentlyContinue
+if (-not $python) {
+    $python = Get-Command python3 -ErrorAction SilentlyContinue
+}
+if ($python) {
+    Write-NvimDepsLog "Ensuring debugpy is installed"
+    & $python.Source -m pip install --user --upgrade debugpy
+}
+
+if (-not (Get-Command tree-sitter -ErrorAction SilentlyContinue)) {
+    if (Get-Command npm -ErrorAction SilentlyContinue) {
+        Write-NvimDepsLog "Installing tree-sitter CLI through npm"
+        npm install --global tree-sitter-cli
+        Refresh-Path
+    }
+}
+
+$requiredCommands = @("nvim", "git", "rg", "fd", "fzf", "lazygit", "delta", "yazi", "node", "python", "tree-sitter", "pwsh")
+$missing = @()
+foreach ($command in $requiredCommands) {
+    if (-not (Get-Command $command -ErrorAction SilentlyContinue)) {
+        $missing += $command
+    }
+}
+
+if ($missing.Count -gt 0) {
+    Write-Warning "Open a new terminal, then verify these commands: $($missing -join ', ')"
+}
+
+Write-NvimDepsLog "Neovim prerequisites are ready; restart the terminal before launching nvim"

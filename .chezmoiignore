@@ -1,0 +1,60 @@
+# Windows applications store these settings below %USERPROFILE%\AppData.
+# Do not create a fake AppData tree on Linux (including WSL).
+{{- if ne .chezmoi.os "windows" }}
+AppData/**
+.config/scoop/**
+{{- end }}
+
+# Local VCS metadata belongs to the editor's nested repository, not chezmoi.
+.config/nvim/.git/**
+.config/nvim/.agents/**
+.config/nvim/.aws/**
+.config/nvim/.codex/**
+{{- if eq .chezmoi.os "windows" }}
+.config/nvim/bin/tree-sitter
+{{- else }}
+.config/nvim/bin/tree-sitter.cmd
+.config/nvim/bin/tree-sitter.ps1
+{{- end }}
+
+# Linux owns the XDG Yazi target. Windows uses AppData/Roaming/yazi instead.
+{{- if eq .chezmoi.os "windows" }}
+.config/yazi/**
+.config/nushell/config.nu
+.config/nushell/env.nu
+{{- end }}
+
+{{- if ne .chezmoi.os "linux" }}
+20-install-nvim-dependencies.sh
+{{- end }}
+{{- if ne .chezmoi.os "windows" }}
+20-install-nvim-dependencies.ps1
+30-link-nvim-config.ps1
+{{- end }}
+
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+
+**/Thumbs.db
+**/ehthumbs.db
+
+**/*~
+**/#*#
+**/.TemporaryItems
+
+**/Library/Application Support/com.mitchellh.ghostty/*.tmp
+
+**/.vscode
+**/.idea
+**/.history
+
+**/node_modules
+**/package-lock.json
+**/pnpm-lock.yaml
+**/yarn.lock
+
+**/tmp
+**/temp
+
+**/*.cache

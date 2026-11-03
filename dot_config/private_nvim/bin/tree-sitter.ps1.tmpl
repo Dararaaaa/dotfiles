@@ -1,0 +1,13 @@
+$scriptDirectory = Split-Path -Parent $PSCommandPath
+$realTreeSitter = Get-Command tree-sitter -CommandType Application -All -ErrorAction SilentlyContinue |
+    Where-Object { (Split-Path -Parent $_.Source) -ne $scriptDirectory } |
+    Select-Object -First 1
+
+if (-not $realTreeSitter) {
+    [Console]::Error.WriteLine("tree-sitter: real executable not found")
+    exit 127
+}
+
+$forwarded = @($args | Where-Object { $_ -ne "--no-bindings" })
+& $realTreeSitter.Source @forwarded
+exit $LASTEXITCODE
