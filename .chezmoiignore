@@ -1,3 +1,7 @@
+# 仅在Windows中忽略
+{{ if eq .chezmoi.os "windows" }}
+.config/fish/**
+{{ end }}
 # Windows applications store these settings below %USERPROFILE%\AppData.
 # Do not create a fake AppData tree on Linux (including WSL).
 {{- if ne .chezmoi.os "windows" }}
