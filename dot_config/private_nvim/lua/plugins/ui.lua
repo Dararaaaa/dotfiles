@@ -32,7 +32,7 @@ return {
     },
     opts = {
       options = {
-        theme = "catppuccin",
+        theme = "catppuccin-nvim",
         always_divide_middle = false,
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
@@ -340,7 +340,6 @@ return {
     },
     config = function(_, opts)
       require("gitsigns").setup(opts)
-      require("scrollbar.handlers.gitsigns").setup()
     end,
   },
 
@@ -374,18 +373,24 @@ return {
 
   {
     "petertriho/nvim-scrollbar",
+    branch = "refactor/v2",
+    commit = "b39443d8fcae3e326ff965dea3fe7df266c8ccac",
     opts = {
-      handelers = {
-        gitsigns = true, -- Requires gitsigns
-        search = true, -- Requires hlslens
+      exclude = {
+        buftypes = {
+          terminal = true,
+          nofile = true, -- This buftype is used by dap's hover() window
+        },
       },
-      excluded_buftypes = {
-        "terminal",
-        "nofile", -- This buftype is used by dap's hover() window
+      providers = {
+        gitsigns = true,
+        search = true,
       },
       marks = {
         Search = {
-          color = "#CBA6F7",
+          highlight = {
+            fg = "#CBA6F7",
+          },
         },
         GitAdd = { text = "┃" },
         GitChange = { text = "┃" },
@@ -413,8 +418,7 @@ return {
       nearest_only = true,
     },
     config = function(_, opts)
-      -- require('hlslens').setup() is not required
-      require("scrollbar.handlers.search").setup(opts)
+      require("hlslens").setup(opts)
       vim.api.nvim_set_hl(0, "HlSearchLens", { link = "CurSearch" })
       vim.api.nvim_set_hl(0, "HlSearchLensNear", { fg = "#CBA6F7" })
     end,

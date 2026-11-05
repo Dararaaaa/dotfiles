@@ -39,7 +39,7 @@ vim.opt.splitright = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.opt.shell = {{ if eq .chezmoi.os "windows" }}"pwsh"{{ else }}"fish"{{ end }}
+vim.opt.shell = {{ if eq .chezmoi.os "windows" }}"nushell"{{ else }}"fish"{{ end }}
 
 vim.o.winborder = "rounded"
 
